@@ -22,7 +22,7 @@
             height: 100%;
         }
  
-        canvas {
+        canvas { 
             /* top: 50%;
             left: 50%; */
             z-index: 1;
@@ -37,7 +37,7 @@
                 transform: scale(1.2);
             }
             30% {
-                transform: scale(0.9);
+                transform: scale(0.95);
             } 
             80% {
                 transform: scale(1.0);
@@ -58,7 +58,12 @@
             margin-top: 50px;
             font-size: 50px;
         }
-        
+        img {
+            height: 200px;
+            width: 200px;
+            padding: 30px 645px 0px ;
+            
+        }
     </style>
 </HEAD>
   
@@ -74,16 +79,17 @@
          */
         var settings = {
             particles: {
-              length: 5000, // maximum amount of particles
-                duration: 2.5, // particle duration in sec
-                velocity: 136, // particle velocity in pixels/sec
-                effect: -0.95, // play with this for a nice effect
-                size: 10, // particle size in pixels 
-                // length: 18000, // maximum amount of particles
+                // length:13000,
                 // duration: 12.5, // particle duration in sec
                 // velocity: 35, // particle velocity in pixels/sec
                 // effect: -0.35, // play with this for a nice effect
-                // size: 11, // particle size in pixels
+                // size: 11, // particle size in pixels//   
+                length: 5500, // maximum amount of particles
+                duration: 1.5, // particle duration in sec
+                velocity: 160, // particle velocity in pixels/sec
+                effect: -1.5, // play with this for a nice effect
+                size: 8, // particle size in pixels 
+                // 
             },
         };
  
@@ -103,8 +109,7 @@
                     var f = Math.max(0, 16 - (d - b));
                     var g = window.setTimeout(function() {
                         h(d + f)
-                    }, f);
-                    b = d + f;
+                    }, f);                    b = d + f;
                     return g
                 }
             }
@@ -276,7 +281,7 @@
                 // create the path
                 context.beginPath();
                 var t = -Math.PI;
-                var point = to(t);
+                var point = to(t); 
                 context.moveTo(point.x, point.y);
                 while (t < Math.PI) {
                     t += 0.01; // baby steps!
@@ -326,14 +331,17 @@
             }
             window.onresize = onResize;
  
-            // delay rendering bootstrap
+            // delay rendering bootstrap 
             setTimeout(function() {
                 onResize();
                 render();
             }, 10);
         })(document.getElementById('pinkboard'));
     </script>
-<h1>Trái tym to lớn của Phạm Nhật nè :3</h1>
-<video autoplay loop src="./videotrend.mp4"></video>
+<h1>Trái tym to lớn của Phạm Nhật :3 </h1>
+<video autoplay loop src="./sound/videotrend.mp4"></video>
+<div class="imgavt">
+    <img class="img1" src="./img/314907061_624538442785692_6147644094162666839_n.jpg" alt=""></img>
+</div>
 </BODY>
 </HTML>
